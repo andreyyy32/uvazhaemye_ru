@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load sidebar %}
+
+{% block title %} Спасибо! {% endblock %}
+
+{% block content %}
+<p> </p>
+<div class="content">
+    <div class="thanks">
+        <div class="container-thanks">
+            <div class="content-thanks">
+                <div class="thank-thanks">
+                    <div class="title-thanks"><p>Спасибо за оплату и поддержку проекта!</p></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="popup-regions" class="popup-regions">
+    {% get_region %}
+</div>
+
+<div id="popup-categories" class="popup-categories">
+    {% get_category %}
+</div>
+<div id="popup-diploma" class="popup-diploma">
+    {% include "blog2/diploma.html" %}
+</div>
+<div id="popup-search" class="popup-search">
+    {% include "blog2/search_tpl.html" %}
+</div>
+{% endblock %}

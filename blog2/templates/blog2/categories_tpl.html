@@ -1,0 +1,13 @@
+{% load static %}
+<div class="popup__container-categories">
+    <div class="popup__content-categories">
+        {% for category in categories %}
+        <a href="{{ category.get_absolute_url }}">
+            <div class="popup__category-categories">
+                <div class="popup__image-categories"><img src="{{ category.photo.url }}" alt="{{ category.title }}"></div>
+                <div class="popup__title-categories">{{ category.title }}</div>
+            </div>
+        </a>
+        {% endfor %}
+    </div>
+</div>

@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load sidebar %}
+
+{% block title %} {{ post.title }} | {{ block.super }} {% endblock %}
+
+{% block content %}
+
+<div class="content-single">
+    <div class="content-area-single">
+        <div class="content-image-single">
+            <img src="{{ post.photo2.url }}" alt="{{ post.title }}">
+        </div>
+        <div class="content-image-single_preview">
+            <img src="{{ post.photo.url }}" alt="{{ post.title }}">
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="container-single">
+        <div class="content-title-single">{{ post.first_name }} <br> {{ post.last_name }}</div>
+        <div class="content-title2-single">{{ post.subtitle }}</div>
+        <div class="site-bar">
+            <div class="interesting_articles_heading">Интересные статьи</div>
+            <div class="interesting_articles_block">
+                {% get_random_posts %}
+            </div>
+        </div>
+
+        <div class="title__text-area">
+            {{ post.title }}
+        </div>
+        <div class="subtitle__text-area">
+            {{ post.subtitle }}
+        </div>
+        <div class="text-area">
+            {{ post.content | safe }}
+        </div>
+
+    </div>
+    {% include "blog2/share-social.html" %}
+
+</div>
+<div id="popup-regions" class="popup-regions">
+    {% get_region %}
+</div>
+<div id="popup-categories" class="popup-categories">
+    {% get_category %}
+</div>
+<div id="popup-diploma" class="popup-diploma">
+    {% include "blog2/diploma.html" %}
+</div>
+<div id="popup-search" class="popup-search">
+    {% include "blog2/search_tpl.html" %}
+</div>
+{% endblock %}

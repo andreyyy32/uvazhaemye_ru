@@ -1,0 +1,20 @@
+{% load menu %}
+<div class="header">
+			<div class="container">
+				<div class="header__row">
+					<div class="header__logo">
+						<a href="{% url 'home' %}">Самые уважаемые люди</a>
+					</div>
+					<div class="header__menu">
+						<a href="#tile" id="tile_button" class="tile_list" title="Плитка"><i class="fa fa-th tile_button"></i></a>
+						<a href="#list" id="list_button" class="tile_list" title="Список"><i class="fa fa-list tile_button"></i></a>
+						<a href="#popup-regions" class="popup-link" title="Участники по регионам">регионы</a>
+						<a href="#popup-categories" class="popup-link" title="Участники по категориям">категории</a>
+
+						<a href="#popup-search" class="popup-link" title="Поиск"><i class="fa fa-search"></i></a>
+					</div>
+				</div>
+			</div>
+		</div>
+<!--<a href="{{ post.region.get_absolute_url }}">{{ title }}</a>-->
+<!--<a href="#popup-diploma" class="popup-link">диплом</a>-->

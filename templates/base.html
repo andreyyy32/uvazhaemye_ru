@@ -1,0 +1,69 @@
+{% load static %}
+{% load cache %}
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="google-site-verification" content="zokI_YHCwa08c1CYT1_m9tTrsKj0MjR2ApyR1QE_RIY"/>
+    <meta name="yandex-verification" content="0f158405929431a4"/>
+    <meta name='wmail-verification' content='37c2d2178c8685591af12527f555ccb8'/>
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function (m, e, t, r, i, k, a) {
+            m[i] = m[i] || function () {
+                (m[i].a = m[i].a || []).push(arguments)
+            };
+            m[i].l = 1 * new Date();
+            k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+        })
+        (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+        ym(87201331, "init", {
+            clickmap: true,
+            trackLinks: true,
+            accurateTrackBounce: true
+        });
+    </script>
+    <noscript>
+        <div><img src="https://mc.yandex.ru/watch/87201331" style="position:absolute; left:-9999px;" alt=""/></div>
+    </noscript>
+    <!-- /Yandex.Metrika counter -->
+    <title>{% block title %}Самые уважаемые люди{% endblock %}</title>
+    <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.min.css' %}">
+<!--    <link rel="stylesheet" type="text/css" href="{% static 'css/formStyle.css' %}">-->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+</head>
+
+<body>
+<div class="wrapper">
+
+
+    {% include 'inc/_header.html' %}
+
+
+    {% block content %}{% endblock %}
+
+
+    {% include 'inc/_footer.html' %}
+
+
+</div>
+
+<a class="back_to_top" title="Наверх"><i class="fa fa-arrow-circle-up" aria-hidden="true"></i></a>
+
+<script src="{% static 'js/tile_list.js' %}"></script>
+<script src="{% static 'js/remove_button.js' %}"></script>
+<script src="{% static 'js/backToTop.js' %}"></script>
+<script src="{% static 'js/lazy_loading.js' %}"></script>
+<script src="{% static 'js/popup.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<script src="{% static 'js/jquery-3.6.0.min.js' %}"></script>
+<script src="{% static 'js/script.js' %}"></script>
+<script src="https://yastatic.net/share2/share.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load sidebar %}
+
+
+{% block title %} {{ title }} | {{ block.super }} {% endblock %}
+
+{% block content %}
+
+<div id="tile" class="content">
+    <div class="container">
+        <div class="content-area__row">
+            {% for post in posts %}
+            <div class="content-area__title">
+                <a href="{{ post.get_absolute_url }}">
+                    <img class="img-content" data="{{ post.photo.url }}" src="{% static '1x1.jpg' %}"
+                         alt="{{ post.title }}">
+                    <div class="image-title">{{ post.first_name }} <br> {{ post.last_name }}</div>
+                    <div class="image-title2">{{ post.subtitle }}</div>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+<div class="hidden1 content" id="list">
+    <div class="container">
+        <div class="content-area__row-list">
+            {% for post in posts %}
+            <ul>
+                <li>
+                    <a href="{{ post.get_absolute_url }}">
+                        <div class="list__block">
+                            <div class="list__image">
+                                <img class="img-content" data="{{ post.photo.url }}" src="{% static '1x1.jpg' %}"
+                                     alt="{{ post.title }}" height="100px" width="100px">
+                            </div>
+                            <div class="list__title">{{ post.title }}</div>
+                            <div class="list__subtitle">{{ post.subtitle }}</div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+<div id="popup-regions" class="popup-regions">
+    {% get_region %}
+</div>
+<div id="popup-categories" class="popup-categories">
+    {% get_category %}
+</div>
+<div id="popup-diploma" class="popup-diploma">
+    {% include "blog2/diploma.html" %}
+</div>
+<div id="popup-search" class="popup-search">
+    {% include "blog2/search_tpl.html" %}
+</div>
+{% endblock %}

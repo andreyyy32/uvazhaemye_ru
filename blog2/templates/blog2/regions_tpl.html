@@ -1,0 +1,13 @@
+{% load static %}
+<div class="popup__container-regions">
+    <div class="popup__content-regions">
+            {% for region in regions %}
+        <a href="{{ region.get_absolute_url }}">
+            <div class="popup__region-regions">
+                <div class="popup__image-regions"><img src="{{ region.photo.url }}" alt="{{ region.title }}"></div>
+                <div class="popup__title-regions">{{ region.title }}</div>
+            </div>
+        </a>
+            {% endfor %}
+    </div>
+</div>
