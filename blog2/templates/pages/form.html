@@ -18,7 +18,7 @@
             <input type="text" id="formPositionAtWork" name="positionAtWork" class="form__input _req">
         </div>
         <div class="form__item">
-            <label for="formRegion" class="form__label">Выберите регион*</label>
+            <label for="formRegion" class="form__label">Регион*</label>
             <select id="formRegion" name="region" class="select _req">
                 <option value=""></option>
                 <option value="Москва">Москва</option>
@@ -162,16 +162,15 @@
                 <input type="checkbox" id="formDiploma" name="agreement" class="checkbox__input">
                 <label for="formDiploma" class="checkbox__label"><span>Я хочу заказать диплом участника проекта (услуга платная)</span>
                 </label>
-            </div>
-        </div>
-        <div class="form__item">
-            <div class="checkbox">
                 <input type="checkbox" id="formAgreement" name="agreement" class="checkbox__input _req"
                        checked="checked">
                 <label for="formAgreement" class="checkbox__label"><span>Нажимая кнопку отправить я соглашаюсь с
-                    <a href="https://uvazhaemye.ru/pages/agreement/">Пользовательским соглашением</a> и <a href="https://uvazhaemye.ru/pages/privacy-policy/">Политикой конфиденциальности</a></span>
+                    <a href="https://uvazhaemye.ru/pages/agreement/">Пользовательским соглашением</a> и <a
+                            href="https://uvazhaemye.ru/pages/privacy-policy/">Политикой конфиденциальности</a></span>
                 </label>
             </div>
+        </div>
+        <div class="form__item">
         </div>
         <div class="form__button">
             <input type="submit" id="formSubmit" name="submit" class="form__button">
@@ -194,20 +193,21 @@
         </div>
     </div>
 </div>
-    <div id="popup-regions" class="popup-regions">
-        {% get_region %}
-    </div>
+<div id="popup-regions" class="popup-regions">
+    {% get_region %}
+</div>
 
-    <div id="popup-categories" class="popup-categories">
-        {% get_category %}
-    </div>
-    <div id="popup-diploma" class="popup-diploma">
-        {% include "blog2/diploma.html" %}
-    </div>
-    <div id="popup-search" class="popup-search">
-        {% include "blog2/search_tpl.html" %}
-    </div>
+<div id="popup-categories" class="popup-categories">
+    {% get_category %}
+</div>
+<div id="popup-diploma" class="popup-diploma">
+    {% include "blog2/diploma.html" %}
+</div>
+<div id="popup-search" class="popup-search">
+    {% include "blog2/search_tpl.html" %}
+</div>
+<p></p>
 
-<script src="{% static 'js/script.js' %}"></script>
+<!--<script src="{% static 'js/script.js' %}"></script>-->
 
-    {% endblock %}
+{% endblock %}

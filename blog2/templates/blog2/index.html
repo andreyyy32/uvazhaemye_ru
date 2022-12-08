@@ -13,8 +13,8 @@
             {% for post in posts %}
             <div class="content-area__title">
                 <a href="{{ post.get_absolute_url }}">
-                    <img class="img-content" data="{{ post.photo.url }}" src="{% static '1x1.jpg' %}"
-                         alt="{{ post.title }}">
+                    <img class="img-content" data="{{ post.photo.url }}" src="img/1x1.jpg"
+                         alt="{{ post.title }}"/>
                     <div class="image-title">{{ post.first_name }} <br> {{ post.last_name }}</div>
                     <div class="image-title2">{{ post.subtitle }}</div>
                 </a>
