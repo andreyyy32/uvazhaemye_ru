@@ -358,7 +358,7 @@ textarea.form__input {
     text-decoration: none;
 }
 
-.popup__error_title{
+.popup__error_title {
     display: flex;
     align-items: center;
     justify-content: center;
