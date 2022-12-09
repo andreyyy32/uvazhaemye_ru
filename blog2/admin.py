@@ -26,7 +26,7 @@ class PostAdmin(admin.ModelAdmin):
     list_filter = ('category', 'region')
     readonly_fields = ('views', 'created_at', 'get_photo')
     fields = (
-        'title',  'first_name', 'last_name', 'subtitle', 'slug', 'category', 'region', 'content', 'photo', 'photo2', 'get_photo', 'views', 'created_at', 'is_published')
+        'title',  'first_name', 'last_name', 'subtitle', 'slug', 'category', 'region', 'content', 'content_file', 'photo', 'photo2', 'get_photo', 'views', 'created_at', 'is_published')
 
     def get_photo(self, obj):
         if obj.photo:
