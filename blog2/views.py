@@ -8,6 +8,7 @@ class Home(ListView):
     model = Post
     template_name = 'blog2/index.html'
     context_object_name = 'posts'
+
     # paginate_by = 4
 
     def get_context_data(self, *, object_list=None, **kwargs):
@@ -26,7 +27,7 @@ class PostsByCategory(ListView):
     allow_empty = False
 
     def get_queryset(self):
-        return Post.objects.filter(category__slug=self.kwargs['slug'],  is_published=True)
+        return Post.objects.filter(category__slug=self.kwargs['slug'], is_published=True)
 
     def get_context_data(self, *, object_list=None, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -65,10 +66,13 @@ class GetPost(DetailView):
 class Search(ListView):
     template_name = 'blog2/search.html'
     context_object_name = 'posts'
+
     # paginate_by = 4
 
     def get_queryset(self):
-        return Post.objects.filter(title__icontains=self.request.GET.get('s'), is_published=True) or Post.objects.filter(subtitle__icontains=self.request.GET.get('s'), is_published=True)
+        return Post.objects.filter(title__icontains=self.request.GET.get('s'),
+                                   is_published=True) or Post.objects.filter(
+            subtitle__icontains=self.request.GET.get('s'), is_published=True)
 
     def get_context_data(self, *, object_list=None, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -76,5 +80,13 @@ class Search(ListView):
         return context
 
 
+def form(request):
+    return render(request, 'blog2/form.html')
 
 
+def agreement(request):
+    return render(request, 'pages/agreement.html')
+
+
+def privacy_policy(request):
+    return render(request, 'pages/privacy_policy.html')
