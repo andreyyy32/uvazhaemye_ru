@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.views.generic import ListView, DetailView
 from .models import *
 from django.db.models import F
+from .forms import Form
 
 
 class Home(ListView):
@@ -81,7 +82,11 @@ class Search(ListView):
 
 
 def form(request):
-    return render(request, 'blog2/form.html')
+    if request.method == 'POST':
+        pass
+    else:
+        form_tpl = Form()
+    return render(request, 'blog2/form.html', {'form': form_tpl})
 
 
 def agreement(request):

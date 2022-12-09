@@ -51,6 +51,7 @@ class Post(models.Model):
     category = models.ForeignKey(Category, on_delete=models.PROTECT, related_name='posts')
     is_published = models.BooleanField(default=True, verbose_name='Опубликовано или нет')
 
+
     def __str__(self):
         return self.title
 
