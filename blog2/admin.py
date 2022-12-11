@@ -21,12 +21,12 @@ class PostAdmin(admin.ModelAdmin):
     save_on_top = True
     list_display = ('id', 'title', 'first_name', 'last_name', 'subtitle', 'slug', 'category', 'created_at', 'get_photo', 'is_published')
     list_display_links = ('id', 'title')
-    search_fields = ('title', 'article_text')
+    search_fields = ('title', 'context')
     list_editable = ('is_published',)
     list_filter = ('category', 'region')
     readonly_fields = ('views', 'created_at', 'get_photo')
     fields = (
-        'title',  'first_name', 'last_name', 'subtitle', 'slug', 'category', 'region', 'article_text', 'photo', 'photo2', 'get_photo', 'views', 'created_at', 'is_published')
+        'title',  'first_name', 'last_name', 'subtitle', 'slug', 'category', 'region', 'content', 'photo', 'photo2', 'get_photo', 'views', 'created_at', 'is_published')
 
     def get_photo(self, obj):
         if obj.photo:

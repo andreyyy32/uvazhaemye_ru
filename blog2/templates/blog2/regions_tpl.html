@@ -5,7 +5,7 @@
         <div class="popup__region-regions">
             <a href="{{ region.get_absolute_url }}">
                 <div class="popup__image-regions">
-                    <img src="{{ region.photo.url }}" alt="{{ region.title }}">
+                    <img src="{{ region.photo.url }}" loading="lazy" alt="{{ region.title }}">
                 </div>
                 <div class="popup__title-regions">{{ region.title }}</div>
             </a>

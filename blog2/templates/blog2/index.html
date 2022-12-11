@@ -13,7 +13,7 @@
             {% for post in posts %}
             <div class="content-area__title">
                 <a href="{{ post.get_absolute_url }}">
-                    <img class="img-content" data="{{ post.photo.url }}" src="img/1x1.jpg"
+                    <img class="img-content" loading="lazy" src="{{ post.photo.url }}"
                          alt="{{ post.title }}"/>
                     <div class="image-title">{{ post.first_name }} <br> {{ post.last_name }}</div>
                     <div class="image-title2">{{ post.subtitle }}</div>
@@ -32,7 +32,7 @@
                     <a href="{{ post.get_absolute_url }}">
                         <div class="list__block">
                             <div class="list__image">
-                                <img class="img-content" data="{{ post.photo.url }}" src="{% static '1x1.jpg' %}"
+                                <img class="img-content" loading="lazy" src="{{ post.photo.url }}"
                                      alt="{{ post.title }}" height="100px" width="100px">
                             </div>
                             <div class="list__title">{{ post.title }}</div>

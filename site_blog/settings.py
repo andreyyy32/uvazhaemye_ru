@@ -1,7 +1,6 @@
 import os
 from pathlib import Path
 from decouple import config
-
 BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 
 SECRET_KEY = config('SECRET_KEY')
@@ -57,6 +56,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'site_blog.wsgi.application'
 
+
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
@@ -64,8 +64,18 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
-    },
-}
+        # 'ENGINE': 'django.db.backends.mysql',
+        # 'NAME': 'u1472757_default',
+        # 'USER': 'u1472757_default',
+        # 'PASSWORD': 's87jZz4y9aJPm1hT',
+        # 'HOST': 'localhost',
+        # 'OPTIONS': {
+        #     'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
+        #     'charset': 'utf8mb4',
+        },
+    }
+
+
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
@@ -85,6 +95,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
 
@@ -97,6 +108,7 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
+
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
@@ -157,15 +169,16 @@ CKEDITOR_CONFIGS = {
             ]},
         ],
         'toolbar': 'YourCustomToolbarConfig',  # put selected toolbar config here
-        'tabSpaces': 4,
+                'tabSpaces': 4,
         'extraPlugins': ','.join([
-            'uploadimage',  # the upload image feature
+            'uploadimage', # the upload image feature
             # your extra plugins here
             'div',
             'autolink',
             'autoembed',
             'embedsemantic',
             'autogrow',
+            # 'devtools',
             'widget',
             'lineutils',
             'clipboard',
@@ -184,12 +197,3 @@ CACHES = {
 }
 
 SITE_ID = 1
-
-INTERNAL_IPS = ['127.0.0.1']
-
-EMAIL_HOST = 'smtp.'
-EMAIL_PORT = 465
-EMAIL_HOST_USER = ''
-EMAIL_HOST_PASSWORD = ''
-EMAIL_USE_TLS = False
-EMAIL_USE_SSL = False

@@ -353,7 +353,7 @@ body.lock {
     transform: translate(0px, 0%);
     opacity: 1;
     margin-top: 45px;
-    max-width: 800px;
+    max-width: 1000px;
 }
 
 .popup__container-regions {
