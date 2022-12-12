@@ -6,5 +6,6 @@ urlpatterns = [
     path('category/<str:slug>/', PostsByCategory.as_view(), name='category'),
     path('region/<str:slug>/', PostsByRegion.as_view(), name='region'),
     path('post/<str:slug>/', GetPost.as_view(), name='post'),
+    path('form/form_app/', form_app, name='form_app'),
     path('search/', Search.as_view(), name='search'),
 ]

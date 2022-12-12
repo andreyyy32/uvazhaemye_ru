@@ -789,6 +789,11 @@ body.lock {
     margin: 0 100px 0 0;
 }
 
+.right_block {
+    display: flex;
+    flex-direction: column;
+}
+
 .text-area__tags {
     text-align: right;
 }
@@ -870,6 +875,12 @@ body.lock {
 
 .subtitle__text-area {
     display: none;
+}
+
+.social {
+    display: flex;
+    justify-content: right;
+    margin: 10px 10px 30px 10px;
 }
 
 .back_to_top {
@@ -1040,11 +1051,6 @@ body.lock {
         float: left;
         margin: 10px 50px 30px 30px;
     }
-}
-
-.ya-share2 {
-    float: right;
-    margin: 10px 60px 30px 30px;
 }
 
 .thanks {

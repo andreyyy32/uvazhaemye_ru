@@ -27,20 +27,21 @@
                 {% get_random_posts %}
             </div>
         </div>
-
         <div class="title__text-area">
             {{ post.title }}
         </div>
         <div class="subtitle__text-area">
             {{ post.subtitle }}
         </div>
-        <div class="text-area">
-            {{ post.article_text | safe }}
+        <div class="right_block">
+            <div class="text-area">
+                {{ post.content | safe }}
+            </div>
+            <div class="social">
+                {% include "blog2/share-social.html" %}
+            </div>
         </div>
-
     </div>
-    {% include "blog2/share-social.html" %}
-
 </div>
 <div id="popup-regions" class="popup-regions">
     {% get_region %}

@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.views.generic import ListView, DetailView
 from .models import *
 from django.db.models import F
+from .forms import FormApplication
 
 
 class Home(ListView):
@@ -75,6 +76,13 @@ class Search(ListView):
         context['s'] = f"s={self.request.GET.get('s')}&"
         return context
 
+
+def form_app(request):
+    if request.method == 'POST':
+        pass
+    else:
+        form = FormApplication
+    return render(request, 'form/form_app.html', {'form': form})
 
 
 

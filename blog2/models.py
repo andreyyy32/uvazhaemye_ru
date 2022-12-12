@@ -42,7 +42,7 @@ class Post(models.Model):
     first_name = models.CharField(max_length=255, verbose_name='Фамилия')
     last_name = models.CharField(max_length=255, verbose_name='Имя, Отчество')
     subtitle = models.CharField(max_length=100, verbose_name='Профессия, должность')
-    article_text = models.TextField(blank=True, verbose_name='Текст статьи')
+    content = models.TextField(blank=True, verbose_name='Текст статьи')
     created_at = models.DateTimeField(auto_now_add=True, verbose_name='Опубликовано')
     photo = models.ImageField(upload_to='photos/%Y/%m/%d', blank=True, verbose_name='Превью')
     photo2 = models.ImageField(upload_to='photos/%Y/%m/%d', blank=True, verbose_name='Основное фото в статье')
