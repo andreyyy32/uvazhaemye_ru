@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.views.generic import ListView, DetailView
 from .models import *
 from django.db.models import F
@@ -82,7 +82,15 @@ def form_app(request):
         pass
     else:
         form = FormApplication
-    return render(request, 'form/form_app.html', {'form': form})
+    return render(request, 'blog2/form_app.html', {'form': form})
+
+
+def agreement(request):
+    return render(request, 'blog2/agreement.html')
+
+
+def privacy_policy(request):
+    return render(request, 'blog2/privacy_policy.html')
 
 
 
