@@ -1,8 +1,40 @@
-<div class="footer">
+{% load menu %}
+<div class="footer open">
     <div class="container">
         <div class="footer__row">
-            <a href="{{ post.region.get_absolute_url }}"><div class="footer__text"> {{ title }} </div></a>
+            <div class="footer__req">
+                <div class="footer_vcipd">
+                    2016-2023 Всероссийский центр иследования проффесиональной деятельности ВЦИПД
+                </div>
+                <div class="footer_copyright footer_hover">
+                    При полном или частичном использовании материалов ссылка на источник обязательна.
+                        Информиция публикуется на основании
+                        <a href="#">Политики конфиденциальности</a>
+                        и
+                        <a href="#">Пользовательского соглашения.</a>
+                        Ответственность за достоверность фактов и других сведений несут авторы материалов.
+                </div>
+            </div>
+            <div class="footer__menu">
+                <a href="mailto:samye@uvazaemye.ru" title="Напишите нам" style="font-size: 15px">E-mail:
+                    samye@uvazaemye.ru</a>
+            </div>
+            <div class="footer__menu">
+                <div class="div footer_menu_forms">
+                    <div class="footer_menu_a">
+                        <a href="{% url 'form_app' %}" title="Форма заявки">участие в проекте</a>
+                    </div>
+                    <div class="footer_menu_a">
+                        <a href="{% url 'diplom' %}" title="Форма заказа диплома">диплом участника</a>
+                    </div>
+                    <div class="footer_menu_a">
+                        <a href="{% url 'donut' %}" title="Поддержите проект финансово">поддержать проект</a>
+                    </div>
+                </div>
+
+            </div>
         </div>
     </div>
+</div>
 </div>
 

@@ -85,6 +85,22 @@ def form_app(request):
     return render(request, 'blog2/form_app.html', {'form': form})
 
 
+def diplom(request):
+    if request.method == 'POST':
+        pass
+    else:
+        diplom = FormApplication
+    return render(request, 'blog2/diplom.html', {'diplom': diplom})
+
+
+def donut(request):
+    if request.method == 'POST':
+        pass
+    else:
+        donut = FormApplication
+    return render(request, 'blog2/donut.html', {'donut': donut})
+
+
 def agreement(request):
     return render(request, 'blog2/agreement.html')
 
